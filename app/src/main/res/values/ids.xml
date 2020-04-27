@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textViewUsuarioValue" type="id" />
+    <item name="textViewSenhaValue" type="id" />
+    <item name="textViewUrlValue" type="id" />
+    <item name="textViewObsValue" type="id" />
+</resources>
