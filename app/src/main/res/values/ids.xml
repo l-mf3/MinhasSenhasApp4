@@ -4,4 +4,7 @@
     <item name="textViewSenhaValue" type="id" />
     <item name="textViewUrlValue" type="id" />
     <item name="textViewObsValue" type="id" />
+    <item name="opcao3" type="id" />
+    <item name="opcao2" type="id" />
+    <item name="opcao1" type="id" />
 </resources>

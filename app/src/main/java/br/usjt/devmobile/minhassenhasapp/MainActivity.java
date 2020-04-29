@@ -6,7 +6,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -23,6 +27,44 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText senha;
     private RoundedImageView imagemMain;
     private LinearLayout layoutImagem;
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu,
+                                    View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu_lista_senhas, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item){
+        AdapterView.AdapterContextMenuInfo info =
+                (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+
+        String nomeSelecionado = (String)
+                getListView().getItemAtPosition(info.position);
+
+        switch (item.getItemId()) {
+            case R.id.opcao1:
+                Toast.makeText(this, "Opção 1 - "+
+                        nomeSelecionado, Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.opcao2:
+                Toast.makeText(this, "Opção 2 - "+
+                        nomeSelecionado, Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.opcao3:
+                Toast.makeText(this, "Opção 3 - "+
+                        nomeSelecionado, Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onContextItemSelected(item);
+    }
+
+    private AdapterView getListView() {
+        return getListView();
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

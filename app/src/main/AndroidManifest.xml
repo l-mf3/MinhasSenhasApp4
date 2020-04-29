@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="br.usjt.devmobile.minhassenhasapp">
 
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
+    <menu>
+    <item android:id="@+id/opcao1"
+        android:title="Opção 1"/>
+    <item android:id="@+id/opcao2"
+        android:title="Opção 2"/>
+    <item android:id="@+id/opcao3"
+        android:title="Opção 3"/>
+        <activity android:name=".menu"
+            tools:ignore="WrongManifestParent"></activity>
+    </menu>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
